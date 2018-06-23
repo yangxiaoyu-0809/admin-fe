@@ -1,0 +1,8 @@
+{
+  "name": "admin-fe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:yangxiaoyu-0809/admin-fe.git",
+  "author": "yangxiaoyu <1150055925@qq.com>",
+  "license": "MIT"
+}
