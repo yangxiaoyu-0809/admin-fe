@@ -20,7 +20,7 @@ class MUtil{
 					}
 				},
 				error       : err => {
-					typeof reject === 'function' && reject(res.statusText);
+					typeof reject === 'function' && reject(err.statusText);
 				}
 			});
 		});
@@ -35,6 +35,10 @@ class MUtil{
 		    reg 		= new RegExp("(^|&)" + name + "=([^&]*)(&|$)"),
 		    result      = queryString.match(reg);
 		return result ? decodeURIComponent(result[2]) : null;
+	}
+	//成功提示
+	successTips(successMsg){
+		alert(successMsg || '操作成功！');
 	}
 	//错误提示
 	errorTips(errMsg){
