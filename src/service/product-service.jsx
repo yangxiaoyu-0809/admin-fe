@@ -96,6 +96,7 @@ class Product{
 	/*
 	* 品类相关
 	*/
+	//根据父品类id获取品类列表
 	getCategoryList(parentCategoryId){
 		return _mm.request({
 			type : 'post',
@@ -103,6 +104,22 @@ class Product{
 			data : {
 				categoryId : parentCategoryId || 0
 			}
+		});
+	}
+	//新增品类
+	saveCategory(category){
+		return _mm.request({
+			type : 'post',
+			url  : '/manage/category/add_category.do',
+			data : category
+		});
+	}
+	//修改品类名称
+	updateCategoryName(category){
+		return _mm.request({
+			type : 'post',
+			url  : '/manage/category/set_category_name.do',
+			data : category
 		});
 	}
 }
